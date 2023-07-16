@@ -1,0 +1,19 @@
+version: '3.6'
+
+services:
+  aimeos:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: myshop-app
+    restart: always
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/home/php/aimeos
+    networks:
+      - aimeos
+
+networks:
+  aimeos:
+    driver: 'bridge'
