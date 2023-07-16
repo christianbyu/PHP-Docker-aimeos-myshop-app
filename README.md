@@ -102,8 +102,13 @@ In a local environment, you can use the integrated PHP web server to test your n
 installation. Simply execute the following command to start the web server:
 
 ```
+# Manual Running
 cd myshop
 php artisan serve
+```
+```
+# Dockerize
+docker-compose up -d
 ```
 
 **Note:** In an hosting environment, the document root of your virtual host must point to
